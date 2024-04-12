@@ -1,0 +1,45 @@
+$def with (campo)
+<p align="center"><img src="static/logotipo.png" width="250px" height="150px"></p>
+<pre align="center">Projeto SEMAFOROTEL</pre>
+
+$if campo:
+   <p align="center"><em>Active LED:</em> $campo</p>
+$else:
+   <p align="center"><em>Hello</em> SemaforoTel.</p>
+
+<form align="center" action="http://localhost:8080/update">
+	<input 	type="hidden"
+		name="led"
+		value="1">
+	<input type="submit" value="VERMELHO" style="background-color:red;color:black;width:150px;height:40px;"/>
+</form>
+
+<form align="center" action="http://localhost:8080/update">
+	<input 	type="hidden"
+		name="led"
+		value="2">
+	<input type="submit" value="AMARELO" style="background-color:yellow;color:black;width:150px;height:40px;"/>
+</form>
+
+<form align="center" action="http://localhost:8080/update">
+	<input 	type="hidden"
+		name="led"
+		value="3">
+	<input type="submit" value="VERDE" style="background-color:green;color:black;width:150px;height:40px;"/>
+</form>
+
+<form align="center" action="http://localhost:8080/update">
+	<input 	type="hidden"
+		name="led"
+		value="0">
+	<input type="submit" value="APAGAR" style="background-color:white;color:black;width:150px;height:40px;"/>
+</form>
+
+<form align="center" action="http://localhost:8080/auto">
+	<input 	type="hidden"
+		name="led"
+		value="0">
+	<input type="submit" value="AUTOMTICO" style="background-color:aqua;color:black;width:150px;height:40px;"/>
+</form>
+
+<pre align="center"></pre>
